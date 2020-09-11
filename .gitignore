@@ -106,3 +106,6 @@ dist
 package.json
 
 *.code-workspace
+
+*.config.js
+webpack.config.js
