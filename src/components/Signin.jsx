@@ -1,10 +1,14 @@
 import React, {Fragment} from 'react';
-import Navbar from "./layout/Navbar.jsx";
+import { MDBContainer } from "mdbreact";
+import { TitleComponent } from "./Title.jsx";
 
 const SignInIam = () => {
   return (
     <Fragment>
-      <Navbar brands="swap"/>
+      <TitleComponent title="Swaping Sign-In" />
+      <MDBContainer>
+        <div>h2</div>  
+      </MDBContainer>
     </Fragment>
   );
 };
@@ -12,9 +16,12 @@ const SignInIam = () => {
 const SignInRoot = () => {
   return (
     <Fragment>
-      <Navbar brands="swap"/>
+      <TitleComponent title="👾 About!" />
+      <MDBContainer>
+        <div>h2</div>  
+      </MDBContainer>
     </Fragment>
   );
 };
 
-export {Home, SignInIam, SignInRoot};
+export {SignInIam, SignInRoot};
