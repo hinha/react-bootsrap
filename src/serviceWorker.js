@@ -1,3 +1,8 @@
+// const dotenv = require("dotenv");
+// const result = dotenv.config()
+console.log("ASDASASAS")
+console.log(process.env.BASE_URL)
+
 const service = () =>{
     if ("serviceWorker" in navigator) {
         registerServiceWorker();
@@ -8,7 +13,7 @@ const service = () =>{
     function registerServiceWorker(){
         window.addEventListener("load", function() {
             navigator.serviceWorker
-                .register('./sw.js')
+                .register(`/sw.js`)
                 .then(function() {
                     console.log("Pendaftaran ServiceWorker berhasil");
                 })

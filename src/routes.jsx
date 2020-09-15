@@ -1,7 +1,10 @@
 import React, { Fragment } from "react";
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import {SignInIam, SignInRoot} from "./components/Signin.jsx"; 
+import { CookiesProvider } from "react-cookie";
+import { BrowserRouter, Route } from 'react-router-dom';
+import {Provider} from "react-redux";
+import {SignInIam, SignInRoot} from "./components/signin/Signin.jsx"; 
 import Home from './components/Home.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
 import {TitleComponent} from './components/Title.jsx';
 
 // withTitle function
@@ -23,16 +26,18 @@ const HomeComponent = withTitle({component: Home, title: "Swaping Home"})
 
 export default function Routes() {
   return (
-    <BrowserRouter>
-      <div className="mainWrapper">
-    
-        <Fragment>
-          <Route path="/" exact component={HomeComponent}/>
-          <Route path="/sign/iam" exact component={SignInIam}/>
-          <Route path="/sign/root" exact component={SignInRoot}/>
-        </Fragment>
-      </div>
-    </BrowserRouter>
+    <CookiesProvider>
+        <BrowserRouter>
+          <div className="mainWrapper">
+        
+            <Fragment>
+              <Route path="/" exact component={HomeComponent}/>
+              <Route path="/signin" exact component={SignInIam}/>
+              <Route path="/dashboard" exact component={Dashboard}/>
+            </Fragment>
+          </div>
+        </BrowserRouter>
+    </CookiesProvider>
   );
 }
 

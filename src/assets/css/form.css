@@ -1,0 +1,23 @@
+.invalid-feedback {
+    display: inline;
+}
+.br-small {
+    border-radius: .5rem;
+}
+.text-input {
+    padding-top: 8px;
+    clear: both;
+    display: block;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 7px;
+    color: #444;
+}
+
+
+form.user .form-control-user {
+    font-size: .8rem;
+    border-radius: .5rem;
+    padding: 1.2rem 1rem;
+}
