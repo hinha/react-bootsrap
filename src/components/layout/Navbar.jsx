@@ -1,9 +1,24 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
+import React, {
+  Component
+} from 'react';
+import {
+  Link
+} from 'react-router-dom';
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBIcon
+} from "mdbreact";
 import Logo from "../../assets/LogoSwaping.png";
-import "../../assets/css/main.css";
 
 
 const logotest = {
@@ -12,7 +27,7 @@ const logotest = {
   backgroundSize: "cover",
   color: "rgba(0,0,0,0)",
   height: "47px",
-  padding:"0",
+  padding: "0",
   width: "57px",
   borderBottom: "0",
   margin: "auto",
@@ -30,13 +45,13 @@ class Navbar extends Component {
 
   toggleCollapse = collapseID => () =>
     this.setState(prevState => ({
-    collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-  }));
-  
+      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+    }));
+
   render() {
     console.log(logotest)
     return (
-      
+
         <MDBNavbar dark expand="md" fixed="top">
           <div className="container">
             <MDBNavbarBrand className="">
@@ -76,7 +91,7 @@ class Navbar extends Component {
                 </MDBNavItem>
                 <MDBNavItem className="pl-3">
                     <div className="lb-btn lb-none-margin-tp">
-                      <Link to="/sign/iam" className="lb-btn-p-primary">
+                      <Link to="/signin" className="lb-btn-p-primary">
                         <span>Masuk</span>
                       </Link>
                       {/* <MDBNavLink className="lb-btn-p-primary" to="#!">
@@ -95,8 +110,8 @@ class Navbar extends Component {
 // const Navbar = (props) => {
 //   console.log(props)
 //   return (
-    
-    
+
+
 //   )
 // }
 
