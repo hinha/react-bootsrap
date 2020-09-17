@@ -1,8 +1,5 @@
 // const dotenv = require("dotenv");
 // const result = dotenv.config()
-console.log("ASDASASAS")
-console.log(process.env.BASE_URL)
-
 const service = () =>{
     if ("serviceWorker" in navigator) {
         registerServiceWorker();

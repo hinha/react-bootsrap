@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-      browser: true,
+      node: true,
       es2020: true
     },
     extends: ['eslint:recommended', 'plugin:react/recommended'],
@@ -12,5 +12,8 @@ module.exports = {
       sourceType: 'module'
     },
     plugins: ['react'],
-    rules: {}
+    rules: {
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    },  
 };

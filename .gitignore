@@ -1,5 +1,6 @@
 *.png
 *.svg
+*.ico
 # Logs
 logs
 *.log
@@ -111,3 +112,4 @@ package.json
 
 *.config.js
 webpack.config.js
+.env.*
